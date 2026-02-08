@@ -1,0 +1,38 @@
+ImageSetClass {
+ Name "objectspawner"
+ RefSize 512 512
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "{1BCAACA13817DFD9}InventoryManager/Data/GUI/images/objectspawner.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass Clothing {
+   Name "Clothing"
+   Pos -3 7
+   Size 286 294
+   Flags 0
+  }
+  ImageSetDefClass Edible {
+   Name "Edible"
+   Pos 279 39
+   Size 211 212
+   Flags 0
+  }
+  ImageSetDefClass Items {
+   Name "Items"
+   Pos 249 254
+   Size 256 256
+   Flags 0
+  }
+  ImageSetDefClass Weapon {
+   Name "Weapon"
+   Pos 15 296
+   Size 226 211
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}

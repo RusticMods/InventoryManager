@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{1BCAACA13817DFD9}InventoryManager/Data/GUI/images/objectspawner.png"
+ Author "desktop-7l4g037"
+ ChangeDate 1885630589
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "objectspawner.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

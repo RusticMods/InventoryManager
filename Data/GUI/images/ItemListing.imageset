@@ -1,0 +1,38 @@
+ImageSetClass {
+ Name "itemlisting"
+ RefSize 512 512
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "{FF381605CB02FAA5}InventoryManager/Data/GUI/images/imageset.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass TrashCan {
+   Name "TrashCan"
+   Pos 0 0
+   Size 256 275
+   Flags 0
+  }
+  ImageSetDefClass Take {
+   Name "Take"
+   Pos 256 256
+   Size 256 256
+   Flags 0
+  }
+  ImageSetDefClass Search {
+   Name "Search"
+   Pos 258 0
+   Size 256 256
+   Flags 0
+  }
+  ImageSetDefClass Clear {
+   Name "Clear"
+   Pos 5 281
+   Size 225 225
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}

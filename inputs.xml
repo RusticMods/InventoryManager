@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<modded_inputs>
+    <inputs>
+        <actions>
+            <input name="UAInventoryManager" loc="Open Inventory Manager" visible="true" />
+        </actions>
+
+        <sorting name="RusticMods" loc="RusticMods">
+            <input name="UAInventoryManager" />
+        </sorting>
+    </inputs>
+    <preset>
+		<input name="UAInventoryManager">
+            <btn name="kI">
+            </btn>
+        </input>
+    </preset>
+</modded_inputs>

@@ -1,0 +1,720 @@
+FrameWidgetClass rootFrame {
+ position 0 0
+ size 1 1
+ halign center_ref
+ valign center_ref
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ {
+  PanelWidgetClass pnl_frame {
+   clipchildren 1
+   ignorepointer 1
+   color 0.1176 0.1176 0.1176 1
+   size 0.9 0.9
+   halign center_ref
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   style rover_sim_colorable
+   {
+    PanelWidgetClass pnl_bg {
+     clipchildren 1
+     ignorepointer 1
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style blank
+     "no focus" 0
+     {
+      TextWidgetClass Title {
+       visible 1
+       ignorepointer 1
+       position 0.005 0.0065
+       size 0.30232 0.04529
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Normal
+       text "#str_inventorymanagermenu_title"
+       font "gui/fonts/metron"
+       "exact text" 0
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+      ScrollWidgetClass PlayerContainer {
+       visible 1
+       ignorepointer 0
+       position 0.00903 0.02164
+       size 0.75 0.9102
+       halign right_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       "Scrollbar V" 1
+       {
+        GridSpacerWidgetClass PlayerContainerGrid {
+         clipchildren 1
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         Padding 10
+         Margin 1
+         "Size To Content H" 1
+         "Size To Content V" 1
+         Rows 100
+        }
+        PanelWidgetClass ObjectSpawner {
+         visible 0
+         clipchildren 1
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          TextListboxWidgetClass ObjectsList {
+           visible 1
+           color 0.0784 0.0784 0.0784 0.6078
+           position 0 0
+           size 0.5 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Editor
+           "title visible" 0
+           lines 40
+           font "gui/fonts/metron22"
+          }
+          ButtonWidgetClass CategoryAll {
+           position 0.25 0.01
+           size 0.46 0.05
+           halign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Editor
+           text "#str_inventorymanagermenu_all"
+           font "gui/fonts/metron"
+          }
+          ButtonWidgetClass CategoryClothing {
+           position 0.19 0.07
+           size 0.1 0.15
+           halign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Editor
+           font "gui/fonts/metron"
+           {
+            ImageWidgetClass ClothingImage {
+             visible 1
+             disabled 0
+             ignorepointer 1
+             position 0 0
+             size 0.8 0.8
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             image0 "set:objectspawner image:Clothing"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip u" 0
+             "flip v" 0
+            }
+           }
+          }
+          ButtonWidgetClass CategoryEdible {
+           position 0.31 0.07
+           size 0.1 0.15
+           halign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Editor
+           font "gui/fonts/metron"
+           {
+            ImageWidgetClass EdibleImage {
+             visible 1
+             disabled 0
+             ignorepointer 1
+             position 0 0
+             size 0.8 0.8
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             image0 "set:objectspawner image:Edible"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip u" 0
+             "flip v" 0
+            }
+           }
+          }
+          ButtonWidgetClass CategoryItems {
+           visible 1
+           disabled 0
+           position 0.07 0.07
+           size 0.1 0.15
+           halign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Editor
+           font "gui/fonts/metron"
+           {
+            ImageWidgetClass ItemsImage {
+             visible 1
+             disabled 0
+             ignorepointer 1
+             position 0 0
+             size 0.8 0.8
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             image0 "set:objectspawner image:Items"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip u" 0
+             "flip v" 0
+            }
+           }
+          }
+          ButtonWidgetClass CategoryWeapon {
+           position 0.43 0.07
+           size 0.1 0.15
+           halign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Editor
+           font "gui/fonts/metron"
+           {
+            ImageWidgetClass WeaponImage {
+             visible 1
+             disabled 0
+             ignorepointer 1
+             position 0 0
+             size 0.8 0.8
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             image0 "set:objectspawner image:Weapon"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "flip u" 0
+             "flip v" 0
+            }
+           }
+          }
+          ItemPreviewWidgetClass ItemPreview {
+           ignorepointer 1
+           size 0.5 0.3
+           halign right_ref
+           valign bottom_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+          }
+          PanelWidgetClass SeperationBar0 {
+           ignorepointer 1
+           color 0.0784 0.0784 0.0784 1
+           position 0.26 0.2
+           size 0.53 0.01
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style DayZDefaultPanel
+          }
+          PanelWidgetClass ItemCondition {
+           visible 0
+           ignorepointer 1
+           position 0.5 0.62
+           size 0.5 0.05
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            ButtonWidgetClass BtnConditionRaise {
+             ignorepointer 0
+             position 0.38 0
+             size 0.1 1
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "RaiseHealth"
+             text_offset 100000 0
+             {
+              ImageWidgetClass image_right {
+               ignorepointer 1
+               position 0 1
+               size 20 20
+               halign center_ref
+               valign center_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               image0 "set:dayz_gui image:icon_expand"
+               mode blend
+               "src alpha" 1
+               "clamp mode" clamp
+               "flip u" 0
+               "flip v" 0
+               rotation 0 0 90
+              }
+             }
+            }
+            ButtonWidgetClass BtnConditionLower {
+             ignorepointer 0
+             position -0.38 0
+             size 0.1 1
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "LowerHealth"
+             text_offset 100000 0
+             {
+              ImageWidgetClass image_left {
+               visible 1
+               disabled 0
+               ignorepointer 1
+               position 0 0
+               size 20 20
+               halign center_ref
+               valign center_ref
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               image0 "set:dayz_gui image:icon_expand"
+               mode blend
+               "src alpha" 1
+               "clamp mode" clamp
+               "flip u" 0
+               "flip v" 0
+               rotation 0 0 -90
+              }
+             }
+            }
+            TextWidgetClass ItemHealth {
+             ignorepointer 1
+             color 0.1333 0.5451 0.1333 1
+             size 0.5 1
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "Pristine"
+             font "gui/fonts/metron"
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+          PanelWidgetClass ItemQuantity {
+           visible 0
+           ignorepointer 1
+           position 0.5 0.55
+           size 0.5 0.05
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            SliderWidgetClass ItemQuantitySlider {
+             color 0.3922 0.3922 0.3922 1
+             position 0.25 0.25
+             size 0.75 0.5
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             style Editor
+             current 100
+             flipped 0
+             "fill in" 1
+             "draw marker" 0
+             {
+              TextWidgetClass QuantityLabel {
+               ignorepointer 1
+               size 0.25 1
+               halign center_ref
+               valign center_ref
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+               text "100"
+               font "gui/fonts/metron"
+               "text halign" center
+               "text valign" center
+              }
+             }
+            }
+            TextWidgetClass ItemQuantityLabel {
+             ignorepointer 1
+             position 0 0
+             size 0.25 1.085
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "#str_inventorymanagermenu_quantity"
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+          TextWidgetClass SelectedItem {
+           visible 0
+           ignorepointer 1
+           position 0.25 -0.23
+           size 0.5 0.05
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "#str_inventorymanagermenu_selecteditem"
+           font "gui/fonts/metron"
+           "text halign" center
+           "text valign" center
+          }
+          ButtonWidgetClass SpawnInventory {
+           visible 0
+           position 0.25 -0.15
+           size 0.3 0.05
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Editor
+           text "#str_inventorymanagermenu_spawniteminventory"
+           font "gui/fonts/metron"
+          }
+          ButtonWidgetClass SpawnOn {
+           visible 0
+           position 0.25 -0.065
+           size 0.3 0.05
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Editor
+           text "#str_inventorymanagermenu_spawnitemplayer"
+           font "gui/fonts/metron"
+          }
+          CheckBoxWidgetClass ShouldSpawnAttachments {
+           visible 0
+           position 0.26 0.015
+           size 0.5 0.05
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "#str_inventorymanagermenu_spawnitemattachments"
+           font "gui/fonts/metron"
+          }
+         }
+        }
+        TextWidgetClass ScreenMessage {
+         visible 0
+         ignorepointer 1
+         position 0 -0.15
+         size 0.75 0.15
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Bold
+         text "Screen Message"
+         font "gui/fonts/metron"
+         "text halign" center
+         "text valign" center
+        }
+        ButtonWidgetClass BtnTeleportToPlayer {
+         visible 0
+         size 0.3 0.06
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Editor
+         text "#str_inventorymanagermenu_teleporttoplayer"
+         font "gui/fonts/metron"
+        }
+       }
+      }
+      PanelWidgetClass SeperationBar {
+       ignorepointer 1
+       color 0.0784 0.0784 0.0784 1
+       position 0 -0.44
+       size 1 0.01
+       halign center_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DayZDefaultPanel
+      }
+      PlayerPreviewWidgetClass PlayerPreview {
+       visible 1
+       ignorepointer 1
+       position 0 -0.025
+       size 0.24 0.81
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      ButtonWidgetClass BtnTogglePreview {
+       position 0.005 0.02
+       size 0.23 0.05
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       text "#str_inventorymanagermenu_togglepreview"
+       font "gui/fonts/metron"
+      }
+      TextListboxWidgetClass PlayerList {
+       color 0 0 0 0.5882
+       position 0.01 -0.025
+       size 0.23 0.81
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Default
+       "title visible" 0
+       lines 20
+       "highlight row" 0
+       font "gui/fonts/metron"
+      }
+      ButtonWidgetClass BtnUpdateList {
+       position 0.005 0.0725
+       size 0.23 0.05
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       text "#str_inventorymanagermenu_updatelist"
+       font "gui/fonts/metron"
+      }
+      ButtonWidgetClass BtnClose {
+       position 0.00384 0.00651
+       size 0.03539 0.04407
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       text "X"
+       font "gui/fonts/metron"
+      }
+      ButtonWidgetClass BtnClearInventory {
+       visible 0
+       color 1 0 0 1
+       position 0.0438 0.0065
+       size 0.15 0.0441
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       text "#str_inventorymanagermenu_clearinventory"
+       font "gui/fonts/metron"
+      }
+      ButtonWidgetClass BtnAddItem {
+       visible 0
+       color 0 0.8196 0 1
+       position 0.199 0.0065
+       size 0.1 0.0441
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       text "#str_inventorymanagermenu_additem"
+       font "gui/fonts/metron"
+       switch toggle
+      }
+      ButtonWidgetClass BtnRepairAll {
+       visible 0
+       color 0 1 0 1
+       position 0.3038 0.0065
+       size 0.1 0.0441
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       text "#str_inventorymanagermenu_repairall"
+       font "gui/fonts/metron"
+      }
+      EditBoxWidgetClass SearchBox {
+       visible 0
+       position -0.37 0.0065
+       size 0.25 0.044
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       text "#str_inventorymanagermenu_search"
+       "Use default text" 1
+       "exact text" 0
+       font "gui/fonts/metron"
+      }
+      ButtonWidgetClass BtnSearch {
+       visible 0
+       position 0.7175 0.0065
+       size 0.025 0.0441
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       text "Search"
+       text_offset 100000 0
+       font "gui/fonts/metron"
+       {
+        ImageWidgetClass SearchImage {
+         visible 1
+         disabled 0
+         ignorepointer 1
+         position 0 0
+         size 0.8 0.8
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         image0 "set:itemlisting image:Search"
+         mode blend
+         "src alpha" 1
+         "clamp mode" clamp
+         "flip u" 0
+         "flip v" 0
+        }
+       }
+      }
+      ButtonWidgetClass BtnClearSearch {
+       visible 0
+       position 0.7175 0.0065
+       size 0.025 0.0441
+       halign right_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       text "#str_inventorymanagermenu_clearsearch"
+       text_offset 100000 0
+       font "gui/fonts/metron"
+       {
+        ImageWidgetClass SearchImage0 {
+         visible 1
+         disabled 0
+         ignorepointer 1
+         position 0 0
+         size 0.8 0.8
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         image0 "set:itemlisting image:Clear"
+         mode blend
+         "src alpha" 1
+         "clamp mode" clamp
+         "flip u" 0
+         "flip v" 0
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

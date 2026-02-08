@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{FF381605CB02FAA5}InventoryManager/Data/GUI/images/imageset.png"
+ Author "desktop-7l4g037"
+ ChangeDate -861360004
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "imageset.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

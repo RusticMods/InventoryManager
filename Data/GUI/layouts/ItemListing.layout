@@ -1,0 +1,343 @@
+FrameWidgetClass rootFrame {
+ position 0 0
+ size 415 280
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ {
+  PanelWidgetClass ItemListing0 {
+   visible 1
+   disabled 0
+   ignorepointer 1
+   color 0.0784 0.0784 0.0784 1
+   position 0 0
+   size 1 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   style rover_sim_colorable
+   {
+    ItemPreviewWidgetClass ItemPreview0 {
+     ignorepointer 1
+     position 0 0.025
+     size 0.9 0.45
+     halign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+    }
+    TextWidgetClass ItemName0 {
+     ignorepointer 1
+     position 0 0.06
+     size 0.9 0.15
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "AK-47"
+     font "gui/fonts/metron"
+     "text halign" center
+     "text valign" center
+    }
+    TextWidgetClass ItemQLabel {
+     ignorepointer 1
+     position -0.315 0.23
+     size 0.27 0.15
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "#str_inventorymanagermenu_quantity"
+     font "gui/fonts/metron"
+     "text valign" center
+    }
+    EditBoxWidgetClass ItemQuantity0 {
+     position -0.04 0.23
+     size 0.25 0.15
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Default
+     text "1"
+     font "gui/fonts/metron"
+    }
+    ButtonWidgetClass BtnSetQuantity {
+     position 0.19 0.23
+     size 0.2 0.15
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     text "Set"
+     font "gui/fonts/metron"
+    }
+    ButtonWidgetClass BtnMaxQuantity {
+     position 0.34 0.23
+     size 0.09 0.15
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     text "MaxQuantity"
+     text_offset 100000 0
+     font "gui/fonts/metron"
+     {
+      ImageWidgetClass MaxQImage {
+       visible 1
+       disabled 0
+       ignorepointer 1
+       position 0 0
+       size 0.8 0.8
+       halign center_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       image0 "set:dayz_gui image:icon_expand"
+       mode blend
+       "src alpha" 1
+       "clamp mode" clamp
+       "flip u" 0
+       "flip v" 0
+       pivot 0 0
+      }
+     }
+    }
+    ButtonWidgetClass BtnMinQuantity {
+     position 0.44 0.23
+     size 0.09 0.15
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     text "MinQuantity"
+     text_offset 1000000 0
+     font "gui/fonts/metron"
+     {
+      ImageWidgetClass MinQImage {
+       visible 1
+       disabled 0
+       ignorepointer 1
+       size 0.8 0.8
+       halign center_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       image0 "set:dayz_gui image:icon_expand"
+       mode blend
+       "src alpha" 1
+       "clamp mode" clamp
+       "flip u" 0
+       "flip v" 0
+       rotation 0 0 180
+      }
+     }
+    }
+    ButtonWidgetClass BtnDelete0 {
+     position -0.435 0.02
+     size 0.1 0.15
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     text "Delete"
+     text_offset 100000 0
+     font "gui/fonts/metron"
+     {
+      ImageWidgetClass DeleteImage {
+       visible 1
+       disabled 0
+       ignorepointer 1
+       position 0 0
+       size 0.8 0.8
+       halign center_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       image0 "set:itemlisting image:TrashCan"
+       mode blend
+       "src alpha" 1
+       "clamp mode" clamp
+       "flip u" 0
+       "flip v" 0
+       pivot 0 0
+      }
+     }
+    }
+    ButtonWidgetClass BtnTake0 {
+     position -0.325 0.02
+     size 0.1 0.15
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     text "Take"
+     text_offset 1000000 0
+     font "gui/fonts/metron"
+     {
+      ImageWidgetClass TakeImage {
+       visible 1
+       disabled 0
+       ignorepointer 1
+       position 0 0
+       size 0.8 0.8
+       halign center_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       image0 "set:itemlisting image:Take"
+       mode blend
+       "src alpha" 1
+       "clamp mode" clamp
+       "flip u" 0
+       "flip v" 0
+      }
+     }
+    }
+    TextWidgetClass ItemHealth0 {
+     ignorepointer 1
+     position 0.35 0.02
+     size 0.09 0.15
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "P"
+     font "gui/fonts/metron"
+     "text halign" center
+     "text valign" center
+    }
+    ButtonWidgetClass BtnLowerHealth {
+     ignorepointer 0
+     position 0.25 0.02
+     size 0.08 0.15
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "LowerHealth"
+     text_offset 100000 0
+     {
+      ImageWidgetClass image_left {
+       visible 1
+       disabled 0
+       ignorepointer 1
+       position 0 0
+       size 20 20
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       image0 "set:dayz_gui image:icon_expand"
+       mode blend
+       "src alpha" 1
+       "clamp mode" clamp
+       "flip u" 0
+       "flip v" 0
+       rotation 0 0 -90
+      }
+     }
+    }
+    ButtonWidgetClass BtnRaiseHealth {
+     ignorepointer 0
+     position 0.445 0.02
+     size 0.08 0.15
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "RaiseHealth"
+     text_offset 100000 0
+     {
+      ImageWidgetClass image_right {
+       ignorepointer 1
+       position 0 1
+       size 20 20
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       image0 "set:dayz_gui image:icon_expand"
+       mode blend
+       "src alpha" 1
+       "clamp mode" clamp
+       "flip u" 0
+       "flip v" 0
+       rotation 0 0 90
+      }
+     }
+    }
+    ButtonWidgetClass BtnItemID {
+     visible 0
+     position -0.23 0.0195
+     size 0.44 0.15
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     text "ID"
+     font "gui/fonts/metron"
+    }
+    ButtonWidgetClass BtnItemHealthLevel {
+     visible 0
+     position -0.23 0.0195
+     size 0.44 0.15
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     text "ID"
+     font "gui/fonts/metron"
+    }
+   }
+  }
+ }
+}
