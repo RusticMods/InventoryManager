@@ -50,10 +50,13 @@ Players must be present in the `SuperAdmins` list used by RusticModsCore.
 
 ## Installation
 
-Install `InventoryManager` on:
-
-- the **server**
-- all **clients** that should load the UI/content side
+- Click `Code`, then `Download ZIP`
+- Extract the folder within the ZIP file into your P drive
+- Remove the "-main" from the folder name (Eg: InventoryManager instead of InventoryManager-main)
+- Using AddonBuilder (or other packer tool), pack the folder into a PBO
+- Sign PBO using DS Utils
+- Upload to server pack/workshop
+- Done
 
 You should also install:
 
